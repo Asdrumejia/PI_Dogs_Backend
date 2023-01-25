@@ -5,7 +5,7 @@ const routesGetDogs = require("./get/routesGetDogs");
 const routesGetTemperaments = require("./get/routesGetTemperaments");
 const routesPostDog = require("./post/routesPostDog");
 const routesPutDog = require("./put/routesPutDog");
-
+const routesDeleteDog = require('./delete/routesDeleteDog');
 
 const router = Router();
 
@@ -20,6 +20,8 @@ router.use("/temperament", routesGetTemperaments);
 router.use("/dog", routesPostDog);
 
 router.use("/dog", routesPutDog);
+
+router.use("/dog", routesDeleteDog);
 
 
 
