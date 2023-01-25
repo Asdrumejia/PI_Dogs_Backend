@@ -7,6 +7,7 @@ const routesPostDog = require("./post/routesPostDog");
 const routesPutDog = require("./put/routesPutDog");
 const routesDeleteDog = require('./delete/routesDeleteDog');
 
+
 const router = Router();
 
 
@@ -22,7 +23,6 @@ router.use("/dog", routesPostDog);
 router.use("/dog", routesPutDog);
 
 router.use("/dog", routesDeleteDog);
-
 
 
 module.exports = router;
