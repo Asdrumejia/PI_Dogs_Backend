@@ -4,6 +4,7 @@ const { Router } = require('express');
 const routesGetDogs = require("./get/routesGetDogs");
 const routesGetTemperaments = require("./get/routesGetTemperaments");
 const routesPostDog = require("./post/routesPostDog");
+const routesPutDog = require("./put/routesPutDog");
 
 
 const router = Router();
@@ -17,6 +18,9 @@ router.use("/dogs", routesGetDogs);
 router.use("/temperament", routesGetTemperaments);
 
 router.use("/dog", routesPostDog);
+
+router.use("/dog", routesPutDog);
+
 
 
 module.exports = router;
