@@ -3,9 +3,10 @@ const { API_KEY } = process.env;
 require("dotenv").config();
 const { Temperament } = require("../../db");
 
+
 const getTemperaments = async () => {
-// const url = await axios.get(`https://api.thedogapi.com/v1/breeds?api`);
-   const url = await axios.get(`https://api.thedogapi.com/v1/breeds?api_key=${API_KEY}`);
+   const url = await axios.get(`https://api.thedogapi.com/v1/breeds?api`);
+// const url = await axios.get(`https://api.thedogapi.com/v1/breeds?api_key=${API_KEY}`);
    const temps = await url.data;
    let temperament = temps
    .map(t => t.temperament)

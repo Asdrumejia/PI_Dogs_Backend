@@ -22,6 +22,6 @@ module.exports = (Sequelize) => {
 
     {
       timestamps: false,
-    }
+    },
   );
 };

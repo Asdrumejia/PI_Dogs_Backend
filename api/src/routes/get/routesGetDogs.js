@@ -1,12 +1,12 @@
 const { Router } = require("express");
-const { getDogs, getInfoAll } = require("../../controllers/get/getDogs");
+const { getDogsApi, getInfoAll } = require("../../controllers/get/getDogs");
 
 
 const router = Router();
 
 
 router.get("/", async(req, res) => {
-    const { name } = req.query;
+    const {name} = req.query;
     const dogs = await getInfoAll();
     try {
         if(name){
@@ -16,7 +16,7 @@ router.get("/", async(req, res) => {
             res.status(200).send(dogs);
         }
     } catch (error) {
-        res.status(404).send("Failed request")
+        res.status(404).send("Failed request");
     }
 });
 
@@ -30,10 +30,10 @@ router.get("/:id", async (req, res) => {
             const dogId = await dogs.filter(d => d.id == id);
             dogId.length 
             ? res.status(200).send(dogId)
-            : res.status(404).send("Dog not found")
+            : res.status(404).send("Dog not found");
            }
        } catch (error) {
-           res.status(404).send(error.message)
+           res.status(404).send(error.message);
        }
 });
 

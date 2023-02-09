@@ -2,7 +2,7 @@ const { Dog } = require("../../db");
 
 
 const putDog = async (id, name, min_height, max_height, min_weight, max_weight, life_span, image, temperament) => {
-   const DogDb = await Dog.findByPk(id)
+   const DogDb = await Dog.findByPk(id);
 
    DogDb?.update({
       name: name, 
@@ -11,10 +11,10 @@ const putDog = async (id, name, min_height, max_height, min_weight, max_weight, 
       min_weight: min_weight, 
       max_weight: max_weight, 
       life_span: life_span, 
-      image: image, 
-      temperament: temperament
+      temperament: temperament,
+      image: image
    }); 
-   return DogDb
+   return DogDb;
 };
 
 

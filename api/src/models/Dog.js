@@ -45,7 +45,7 @@ module.exports = (sequelize) => {
       },
 
       image: {
-        type: DataTypes.STRING,
+        type: DataTypes.TEXT,
         allowNull: false,
       },
 
@@ -57,6 +57,6 @@ module.exports = (sequelize) => {
 
     {
       timestamps: false,
-    }
+    },
   );
 };

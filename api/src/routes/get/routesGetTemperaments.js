@@ -17,7 +17,7 @@ router.get("/", async(req, res) => {
             res.status(200).send(temperaments);
         }
     } catch (error) {
-        res.status(404).send("Failed request")
+        res.status(404).send("Failed request");
     }
 });
 
