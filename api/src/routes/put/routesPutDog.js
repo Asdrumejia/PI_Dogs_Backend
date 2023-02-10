@@ -16,7 +16,7 @@ router.put("/:id", async (req, res) => {
           res.status(200).send("Successfully modified dog");
        }
     } catch (error) {
-        res.status(400).send(error.message);
+        res.status(404).send(error.message);
     }
 });
 

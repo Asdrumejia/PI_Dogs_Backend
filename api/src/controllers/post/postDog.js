@@ -14,10 +14,10 @@ const postDog = async (name, min_weight, max_weight, min_height, max_height, lif
         });
 
         let temperamentsDb = await Temperament.findAll({
-            where: { name: temperament }
+        where: { name: temperament }
         });
         
-        await newDog.addTemperament(temperamentsDb)
+        await newDog.addTemperament(temperamentsDb);
         return newDog;
     };
 

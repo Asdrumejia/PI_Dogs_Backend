@@ -16,8 +16,8 @@ const getDogsApi = async () => {
             max_height: (d.height.metric.split("-").reverse()[0].trim()),
             life_span: d.life_span,
             temperaments: d.temperament,
-            image: d.image.url,
-        };
+            image: d.image.url
+        }
     })
    return apiInfo;
 };
@@ -28,7 +28,7 @@ const getInfoDb = async () => {
     include:{
          model: Temperament,
          attributes: ['name'],
-         through: {attributes : []}, 
+         through: {attributes : []}
     } 
 })
    return infodb;

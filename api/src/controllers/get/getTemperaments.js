@@ -18,10 +18,8 @@ const getTemperaments = async () => {
 
    temperament.map( (t) => {
      Temperament.findOrCreate({
-        where: {
-            name: t,
-        },
-    });
+        where: { name: t }
+     })
    });
 
    const dbTemps = await Temperament.findAll();
