@@ -14,7 +14,7 @@ router.post("/", async (req, res) => {
         const newDog = await postDog(name, min_weight, max_weight, min_height, max_height, life_span, temperament, image);
         res.status(200).send(newDog);
     } catch (error) {
-        res.status(404).send(error.message)  
+        res.status(404).send(error.message);  
      }
 });
 
