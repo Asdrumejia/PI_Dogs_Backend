@@ -7,7 +7,7 @@ const router = Router();
 
 router.put("/:id", async (req, res) => {
     try {
-       const {id} = req.params
+       const {id} = req.params;
        const {name, min_height, max_height, min_weight, max_weight, life_span, image, temperament} = req.body 
        if(!name || !min_height || !max_height || !min_weight || !max_weight || !life_span || !image || !temperament){
           res.status(404).send("Missing data to modify this dog");

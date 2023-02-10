@@ -22,8 +22,8 @@ router.get("/", async(req, res) => {
 
 
 router.get("/:id", async (req, res) => {
-   //  const id = req.params.id
-       const {id} = req.params
+   //  const id = req.params.id;
+       const {id} = req.params;
        try {
            const dogs = await getInfoAll()
            if(id) {
