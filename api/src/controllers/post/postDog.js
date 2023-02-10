@@ -22,7 +22,6 @@ const postDog = async (name, min_weight, max_weight, min_height, max_height, lif
     };
 
 
-
 module.exports = {
     postDog
 }
